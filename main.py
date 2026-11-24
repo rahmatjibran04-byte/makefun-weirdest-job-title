@@ -25,8 +25,6 @@ def main() -> int:
         with open(output_path, "w", encoding="utf-8", newline="") as f:
             f.write(TITLE)
         os.chmod(output_path, 0o644)
-        if directory:
-            os.chmod(directory, 0o755)
     except OSError as exc:
         print(f"error: cannot write entry to {output_path!r}: {exc}",
               file=sys.stderr)
